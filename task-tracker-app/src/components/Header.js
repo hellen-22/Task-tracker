@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
+import "./../css/style.css"
 
 function Header() {
   return (
-    <div className='row'>
-        <div className='col-md-4'>
+    <div className="">
+      <div className="header">
         <p>Task Tracker</p>
-        </div>
-        <div className='col-md-5'>
-            <button>Add</button>
-        </div>
+        <button className="btn">Add</button>
+      </div>
     </div>
   );
 }
