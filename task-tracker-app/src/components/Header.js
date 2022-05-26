@@ -5,7 +5,7 @@ function Header() {
   return (
     <div className="">
       <div className="header">
-        <p>Task Tracker</p>
+        <h1>Task Tracker</h1>
         <button className="btn">Add</button>
       </div>
     </div>
