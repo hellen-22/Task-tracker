@@ -20,14 +20,14 @@ body {
   border-radius: 5px;
 }
 
-.header {
+.headerr {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.btn {
+.btnn {
   display: inline-block;
   background: rgb(224, 54, 82);
   color: #fff;
@@ -41,15 +41,15 @@ body {
   font-family: inherit;
 }
 
-.btn:focus {
+.btnn:focus {
   outline: none;
 }
 
-.btn:active {
+.btnn:active {
   transform: scale(0.98);
 }
 
-.btn-block {
+.btnn-block {
   display: block;
   width: 100%;
 }
