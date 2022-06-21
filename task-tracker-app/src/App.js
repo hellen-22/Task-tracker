@@ -38,11 +38,16 @@ function App() {
   const toggleReminder = (id) => {
     setTasks(tasks.map( (task) => task.id === id ? { ...task, reminder : !task.reminder } : task))
   }
+  const [showAddTask, setShowAddTask] = useState(false);
+
+  const handleClick = () => {
+    setShowAddTask(!showAddTask);
+  }
 
   return (
     <div className="App" >
-      <Header/>
-      <AddTask onAdd={addTask} />
+      <Header onClick={handleClick} />
+      {showAddTask ? <AddTask onAdd={addTask} /> : null}
       {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />) : ( "No tasks available") }
       
     </div>
