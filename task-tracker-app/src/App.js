@@ -24,6 +24,12 @@ function App() {
       reminder: false,
     },
   ]);
+
+  const addTask = (task) => {
+    const id = tasks.length + 1;
+    const newTask = { id, ...task };
+    setTasks([...tasks, newTask]);
+  }
   
   const deleteTask = (id) =>{
     setTasks(tasks.filter(task => task.id !== id))
@@ -36,7 +42,7 @@ function App() {
   return (
     <div className="App" >
       <Header/>
-      <AddTask/>
+      <AddTask onAdd={addTask} />
       {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />) : ( "No tasks available") }
       
     </div>
